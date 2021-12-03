@@ -136,7 +136,7 @@ public class Engajamento_Instagram {
         suporte.wait(navegador, instagram.getNext());
         navegador.findElement(instagram.getNext()).click();
 
-        for (int i = 0; i <= 30; i++) {
+        for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
             suporte.wait(navegador, instagram.getNext2());
             navegador.findElement(instagram.getNext2()).click();
