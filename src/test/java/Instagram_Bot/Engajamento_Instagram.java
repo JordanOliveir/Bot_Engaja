@@ -45,7 +45,7 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            if(navegador.findElement(instagram.getNext2()).isDisplayed()==true) {
+            if(navegador.findElement(instagram.getLike()).isDisplayed()==true) {
                 navegador.findElement(instagram.getNext2()).click();
             }else {
                 navegador.findElement(instagram.getLike()).click();
@@ -70,7 +70,7 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            if(navegador.findElement(instagram.getNext2()).isDisplayed()==true) {
+            if(navegador.findElement(instagram.getLike()).isDisplayed()==true) {
                 navegador.findElement(instagram.getNext2()).click();
             }else {
                 navegador.findElement(instagram.getLike()).click();
@@ -96,7 +96,7 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            if(navegador.findElement(instagram.getNext2()).isDisplayed()==true) {
+            if(navegador.findElement(instagram.getLike()).isDisplayed()==true) {
                 navegador.findElement(instagram.getNext2()).click();
             }else {
                 navegador.findElement(instagram.getLike()).click();
@@ -121,7 +121,7 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            if(navegador.findElement(instagram.getNext2()).isDisplayed()==true) {
+            if(navegador.findElement(instagram.getLike()).isDisplayed()==true) {
                 navegador.findElement(instagram.getNext2()).click();
             }else {
                 navegador.findElement(instagram.getLike()).click();
@@ -146,7 +146,7 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            if(navegador.findElement(instagram.getNext2()).isDisplayed()==true) {
+            if(navegador.findElement(instagram.getLike()).isDisplayed()==true) {
                 suporte.wait(navegador, instagram.getNext2());
                 navegador.findElement(instagram.getNext2()).click();
             }else {
@@ -173,7 +173,7 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            if(navegador.findElement(instagram.getNext2()).isDisplayed()==true) {
+            if(navegador.findElement(instagram.getLike()).isDisplayed()==true) {
                 navegador.findElement(instagram.getNext2()).click();
             }else {
                 navegador.findElement(instagram.getLike()).click();
