@@ -45,9 +45,11 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            suporte.wait(navegador, instagram.getNext2());
-            navegador.findElement(instagram.getNext2()).click();
-
+            if(navegador.findElement(instagram.getNext2()).isDisplayed()==true) {
+                navegador.findElement(instagram.getNext2()).click();
+            }else {
+                navegador.findElement(instagram.getLike()).click();
+            }
             Thread.sleep(4000);
             suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
@@ -68,9 +70,11 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            suporte.wait(navegador, instagram.getNext2());
-            navegador.findElement(instagram.getNext2()).click();
-
+            if(navegador.findElement(instagram.getNext2()).isDisplayed()==true) {
+                navegador.findElement(instagram.getNext2()).click();
+            }else {
+                navegador.findElement(instagram.getLike()).click();
+            }
             Thread.sleep(4000);
             suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
@@ -92,9 +96,11 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            suporte.wait(navegador, instagram.getNext2());
-            navegador.findElement(instagram.getNext2()).click();
-
+            if(navegador.findElement(instagram.getNext2()).isDisplayed()==true) {
+                navegador.findElement(instagram.getNext2()).click();
+            }else {
+                navegador.findElement(instagram.getLike()).click();
+            }
             Thread.sleep(4000);
             suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
@@ -115,9 +121,11 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            suporte.wait(navegador, instagram.getNext2());
-            navegador.findElement(instagram.getNext2()).click();
-
+            if(navegador.findElement(instagram.getNext2()).isDisplayed()==true) {
+                navegador.findElement(instagram.getNext2()).click();
+            }else {
+                navegador.findElement(instagram.getLike()).click();
+            }
             Thread.sleep(4000);
             suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
@@ -138,14 +146,42 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            suporte.wait(navegador, instagram.getNext2());
-            navegador.findElement(instagram.getNext2()).click();
-
+            if(navegador.findElement(instagram.getNext2()).isDisplayed()==true) {
+                suporte.wait(navegador, instagram.getNext2());
+                navegador.findElement(instagram.getNext2()).click();
+            }else {
+                navegador.findElement(instagram.getLike()).click();
+            }
             Thread.sleep(4000);
             suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
         }
 
+        //Curtir fotos com tag PISCINA
+        navegador.get("https://www.instagram.com/explore/tags/piscina");//navega até paquina de pesquisa
+        Thread.sleep(4000);
+        suporte.wait(navegador, instagram.getFoto());
+        navegador.findElement(instagram.getFoto()).click(); //abre primeira foto da pagina
+
+        Thread.sleep(4000);
+        suporte.wait(navegador, instagram.getLike());
+        navegador.findElement(instagram.getLike()).click();//da like na foto
+
+        Thread.sleep(4000);
+        suporte.wait(navegador, instagram.getNext());
+        navegador.findElement(instagram.getNext()).click();
+
+        for (int i = 0; i <= 35; i++) {
+            Thread.sleep(4000);
+            if(navegador.findElement(instagram.getNext2()).isDisplayed()==true) {
+                navegador.findElement(instagram.getNext2()).click();
+            }else {
+                navegador.findElement(instagram.getLike()).click();
+            }
+            Thread.sleep(4000);
+            suporte.wait(navegador, instagram.getLike());
+            navegador.findElement(instagram.getLike()).click();
+        }
     }
 
     @After
