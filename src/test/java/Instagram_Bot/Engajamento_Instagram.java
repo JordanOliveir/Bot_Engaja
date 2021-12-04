@@ -45,15 +45,11 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            if(navegador.findElement(instagram.getLike()).isDisplayed()==true) {
-                navegador.findElement(instagram.getNext2()).click();
-            }else {
-                navegador.findElement(instagram.getLike()).click();
-            }
-            Thread.sleep(4000);
-            suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
-        }
+
+            Thread.sleep(2000);
+            navegador.findElement(instagram.getNext2()).click();
+            }
 
         //Curtir fotos com tag PRAIA
         navegador.get("https://www.instagram.com/explore/tags/praia");//navega até paquina de pesquisa
@@ -70,14 +66,10 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            if(navegador.findElement(instagram.getLike()).isDisplayed()==true) {
-                navegador.findElement(instagram.getNext2()).click();
-            }else {
-                navegador.findElement(instagram.getLike()).click();
-            }
-            Thread.sleep(4000);
-            suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
+
+            Thread.sleep(2000);
+            navegador.findElement(instagram.getNext2()).click();
         }
 
         //Curtir fotos com tag BEACH
@@ -96,15 +88,13 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            if(navegador.findElement(instagram.getLike()).isDisplayed()==true) {
-                navegador.findElement(instagram.getNext2()).click();
-            }else {
-                navegador.findElement(instagram.getLike()).click();
-            }
-            Thread.sleep(4000);
-            suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
-        }
+            Thread.sleep(2000);
+            navegador.findElement(instagram.getNext2()).click();
+
+            navegador.findElement(instagram.getNext2()).click();
+            Thread.sleep(2000);
+            }
 
         //Curtir fotos com tag SUMMER
         navegador.get("https://www.instagram.com/explore/tags/summer");//navega até paquina de pesquisa
@@ -121,14 +111,10 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            if(navegador.findElement(instagram.getLike()).isDisplayed()==true) {
-                navegador.findElement(instagram.getNext2()).click();
-            }else {
-                navegador.findElement(instagram.getLike()).click();
-            }
-            Thread.sleep(4000);
-            suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
+
+            Thread.sleep(2000);
+            navegador.findElement(instagram.getNext2()).click();
         }
 
         //Curtir fotos com tag VERAO
@@ -146,17 +132,15 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            if(navegador.findElement(instagram.getLike()).isDisplayed()==true) {
-                suporte.wait(navegador, instagram.getNext2());
-                navegador.findElement(instagram.getNext2()).click();
-            }else {
-                navegador.findElement(instagram.getLike()).click();
-            }
-            Thread.sleep(4000);
-            suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
-        }
 
+            Thread.sleep(2000);
+            navegador.findElement(instagram.getNext2()).click();
+        }
+    }
+
+    @Test
+    public void CurtirFotoNoInstagram2() throws InterruptedException {
         //Curtir fotos com tag PISCINA
         navegador.get("https://www.instagram.com/explore/tags/piscina");//navega até paquina de pesquisa
         Thread.sleep(4000);
@@ -173,14 +157,10 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            if(navegador.findElement(instagram.getLike()).isDisplayed()==true) {
-                navegador.findElement(instagram.getNext2()).click();
-            }else {
-                navegador.findElement(instagram.getLike()).click();
-            }
-            Thread.sleep(4000);
-            suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
+
+            Thread.sleep(2000);
+            navegador.findElement(instagram.getNext2()).click();
         }
 
         //Curtir fotos com tag CARIBE
@@ -199,14 +179,10 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
-            if(navegador.findElement(instagram.getLike()).isDisplayed()==true) {
-                navegador.findElement(instagram.getNext2()).click();
-            }else {
-                navegador.findElement(instagram.getLike()).click();
-            }
-            Thread.sleep(4000);
-            suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
+
+            Thread.sleep(2000);
+            navegador.findElement(instagram.getNext2()).click();
         }
     }
 
