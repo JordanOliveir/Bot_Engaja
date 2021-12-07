@@ -29,7 +29,7 @@ public class Engajamento_Instagram {
     }
 
     @Test
-    public void CurtirFotoNoInstagram() throws InterruptedException {
+    public void CurtirFotoBiquini() throws InterruptedException {
         navegador.get("https://www.instagram.com/explore/tags/biquini");//navega até paquina de pesquisa
         Thread.sleep(4000);
         suporte.wait(navegador, instagram.getFoto());
@@ -49,8 +49,11 @@ public class Engajamento_Instagram {
 
             Thread.sleep(2000);
             navegador.findElement(instagram.getNext2()).click();
-            }
-
+        }
+    }
+        
+        @Test
+        public void CurtirFotoPraia() throws InterruptedException {
         //Curtir fotos com tag PRAIA
         navegador.get("https://www.instagram.com/explore/tags/praia");//navega até paquina de pesquisa
         suporte.wait(navegador, instagram.getFoto());
@@ -71,7 +74,10 @@ public class Engajamento_Instagram {
             Thread.sleep(2000);
             navegador.findElement(instagram.getNext2()).click();
         }
+    }
 
+    @Test
+    public void CurtirFotoBeach() throws InterruptedException {
         //Curtir fotos com tag BEACH
         navegador.get("https://www.instagram.com/explore/tags/beach");//navega até paquina de pesquisa
         Thread.sleep(4000);
@@ -94,8 +100,11 @@ public class Engajamento_Instagram {
 
             navegador.findElement(instagram.getNext2()).click();
             Thread.sleep(2000);
-            }
+        }
+    }
 
+    @Test
+    public void CurtirFotoSummer() throws InterruptedException {
         //Curtir fotos com tag SUMMER
         navegador.get("https://www.instagram.com/explore/tags/summer");//navega até paquina de pesquisa
         suporte.wait(navegador, instagram.getFoto());
@@ -116,7 +125,10 @@ public class Engajamento_Instagram {
             Thread.sleep(2000);
             navegador.findElement(instagram.getNext2()).click();
         }
+    }
 
+    @Test
+    public void CurtirFotoVerao() throws InterruptedException {
         //Curtir fotos com tag VERAO
         navegador.get("https://www.instagram.com/explore/tags/verao");//navega até paquina de pesquisa
         suporte.wait(navegador, instagram.getFoto());
@@ -162,7 +174,9 @@ public class Engajamento_Instagram {
             Thread.sleep(2000);
             navegador.findElement(instagram.getNext2()).click();
         }
-
+    }
+    @Test
+    public void CurtirFotoCaribe() throws InterruptedException {
         //Curtir fotos com tag CARIBE
         navegador.get("https://www.instagram.com/explore/tags/caribe");//navega até paquina de pesquisa
         Thread.sleep(4000);
