@@ -6,7 +6,9 @@ import Suporte.Suporte;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 
 public class Engajamento_Instagram {
@@ -36,6 +38,8 @@ public class Engajamento_Instagram {
         navegador.findElement(instagram.getFoto()).click(); //abre primeira foto da pagina
 
         Thread.sleep(4000);
+
+
         suporte.wait(navegador, instagram.getLike());
         navegador.findElement(instagram.getLike()).click();//da like na foto
 
