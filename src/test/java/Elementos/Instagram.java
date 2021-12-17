@@ -8,6 +8,7 @@ public class Instagram {
     private By userName = By.cssSelector("#loginForm > div > div:nth-child(1) > div > label > input");
     private By password = By.cssSelector("#loginForm > div > div:nth-child(2) > div > label > input");
     private By login = By.cssSelector("#loginForm > div > div:nth-child(3) > button > div");
+    private By confirm = By.cssSelector("#react-root > div > div > section > main > div > div > div > section > div > button");
 
     //tela de pesquisa
     private By foto = By.cssSelector("#react-root > div > div > section > main > article > div.EZdmt > div > div > div:nth-child(1) > div:nth-child(1) > a > div > div._9AhH0");
@@ -22,6 +23,8 @@ public class Instagram {
     public By getPassword(){return password;}
 
     public By getLogin(){return login;}
+
+    public By getConfirm(){return confirm;}
 
     //tela de pesquisa
     public By getFoto(){return foto;}
