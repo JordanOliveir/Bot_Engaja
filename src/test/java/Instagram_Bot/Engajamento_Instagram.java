@@ -28,7 +28,6 @@ public class Engajamento_Instagram {
         navegador.findElement(instagram.getLogin()).click();
         Thread.sleep(4000);
         suporte.wait(navegador, instagram.getConfirm());
-        Thread.sleep(4000gi);
     }
 
 
@@ -132,7 +131,7 @@ public class Engajamento_Instagram {
     }
 
     @Test
-    public void CurtirFotoNoInstagram2() throws InterruptedException {
+    public void CurtirFotoPiscina() throws InterruptedException {
         //Curtir fotos com tag PISCINA
         navegador.get("https://www.instagram.com/explore/tags/piscina");//navega até paquina de pesquisa
         Thread.sleep(4000);
