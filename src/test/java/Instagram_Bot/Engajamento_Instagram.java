@@ -19,7 +19,7 @@ public class Engajamento_Instagram {
 
     @Before
     public void logar() throws InterruptedException {
-        navegador = driverSetup.setupChrome("https://www.instagram.com/");
+        navegador = driverSetup.setupFirefox("https://www.instagram.com/");
         suporte.wait(navegador, instagram.getUserName());
         navegador.findElement(instagram.getUserName()).sendKeys("@summerlove_st");
         Thread.sleep(4000);
@@ -32,36 +32,39 @@ public class Engajamento_Instagram {
 
 
 
-        
-        @Test
-        public void CurtirFotoPraia() throws InterruptedException {
-        //Curtir fotos com tag PRAIA
-        navegador.get("https://www.instagram.com/explore/tags/praia");//navega até paquina de pesquisa
-        suporte.wait(navegador, instagram.getFoto());
-        navegador.findElement(instagram.getFoto()).click(); //abre primeira foto da pagina
+    @Test
+    public void CurtirFotoPraia() throws InterruptedException {
+    //Curtir fotos com tag PRAIA
+    navegador.get("https://www.instagram.com/explore/tags/praia");//navega até paquina de pesquisa
+    Thread.sleep(2000);
+    navegador.navigate().refresh();
+    suporte.wait(navegador, instagram.getFoto());
+    navegador.findElement(instagram.getFoto()).click(); //abre primeira foto da pagina
 
-        Thread.sleep(4000);
-        suporte.wait(navegador, instagram.getLike());
-        navegador.findElement(instagram.getLike()).click();//da like na foto
+    Thread.sleep(4000);
+    suporte.wait(navegador, instagram.getLike());
+    navegador.findElement(instagram.getLike()).click();//da like na foto
 
-        Thread.sleep(4000);
-        suporte.wait(navegador, instagram.getNext());
-        navegador.findElement(instagram.getNext()).click();
+    Thread.sleep(4000);
+    suporte.wait(navegador, instagram.getNext());
+    navegador.findElement(instagram.getNext()).click();
 
-            for (int i = 0; i <= 35; i++) {
-                Thread.sleep(4000);
-                navegador.findElement(instagram.getLike()).click();
+        for (int i = 0; i <= 35; i++) {
+            Thread.sleep(4000);
+            suporte.wait(navegador, instagram.getLike());
+            navegador.findElement(instagram.getLike()).click();
 
-                Thread.sleep(2000);
-                navegador.findElement(instagram.getNext2()).click();
-            }
+            Thread.sleep(2000);
+            navegador.findElement(instagram.getNext2()).click();
+        }
     }
 
     @Test
     public void CurtirFotoBeach() throws InterruptedException {
         //Curtir fotos com tag BEACH
         navegador.get("https://www.instagram.com/explore/tags/beach");//navega até paquina de pesquisa
-        Thread.sleep(4000);
+        Thread.sleep(2000);
+        navegador.navigate().refresh();
         suporte.wait(navegador, instagram.getFoto());
         navegador.findElement(instagram.getFoto()).click(); //abre primeira foto da pagina
 
@@ -75,6 +78,7 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
+            suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
 
             Thread.sleep(2000);
@@ -86,6 +90,8 @@ public class Engajamento_Instagram {
     public void CurtirFotoSummer() throws InterruptedException {
         //Curtir fotos com tag SUMMER
         navegador.get("https://www.instagram.com/explore/tags/summer");//navega até paquina de pesquisa
+        Thread.sleep(2000);
+        navegador.navigate().refresh();
         suporte.wait(navegador, instagram.getFoto());
         navegador.findElement(instagram.getFoto()).click(); //abre primeira foto da pagina
 
@@ -99,6 +105,7 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
+            suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
 
             Thread.sleep(2000);
@@ -110,6 +117,8 @@ public class Engajamento_Instagram {
     public void CurtirFotoVerao() throws InterruptedException {
         //Curtir fotos com tag VERAO
         navegador.get("https://www.instagram.com/explore/tags/verao");//navega até paquina de pesquisa
+        Thread.sleep(2000);
+        navegador.navigate().refresh();
         suporte.wait(navegador, instagram.getFoto());
         navegador.findElement(instagram.getFoto()).click(); //abre primeira foto da pagina
 
@@ -123,6 +132,7 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
+            suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
 
             Thread.sleep(2000);
@@ -134,7 +144,8 @@ public class Engajamento_Instagram {
     public void CurtirFotoPiscina() throws InterruptedException {
         //Curtir fotos com tag PISCINA
         navegador.get("https://www.instagram.com/explore/tags/piscina");//navega até paquina de pesquisa
-        Thread.sleep(4000);
+        Thread.sleep(2000);
+        navegador.navigate().refresh();
         suporte.wait(navegador, instagram.getFoto());
         navegador.findElement(instagram.getFoto()).click(); //abre primeira foto da pagina
 
@@ -148,17 +159,20 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
+            suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
 
             Thread.sleep(2000);
             navegador.findElement(instagram.getNext2()).click();
         }
     }
+
     @Test
     public void CurtirFotoCaribe() throws InterruptedException {
         //Curtir fotos com tag CARIBE
         navegador.get("https://www.instagram.com/explore/tags/caribe");//navega até paquina de pesquisa
-        Thread.sleep(4000);
+        Thread.sleep(2000);
+        navegador.navigate().refresh();
         suporte.wait(navegador, instagram.getFoto());
         navegador.findElement(instagram.getFoto()).click(); //abre primeira foto da pagina
 
@@ -172,6 +186,7 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
+            suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
 
             Thread.sleep(2000);
@@ -182,7 +197,8 @@ public class Engajamento_Instagram {
     @Test
     public void CurtirFotoBeachPark() throws InterruptedException {
         navegador.get("https://www.instagram.com/explore/tags/beachpark");//navega até paquina de pesquisa
-        Thread.sleep(4000);
+        Thread.sleep(2000);
+        navegador.navigate().refresh();
         suporte.wait(navegador, instagram.getFoto());
         navegador.findElement(instagram.getFoto()).click(); //abre primeira foto da pagina
 
@@ -196,6 +212,33 @@ public class Engajamento_Instagram {
 
         for (int i = 0; i <= 35; i++) {
             Thread.sleep(4000);
+            suporte.wait(navegador, instagram.getLike());
+            navegador.findElement(instagram.getLike()).click();
+
+            Thread.sleep(2000);
+            navegador.findElement(instagram.getNext2()).click();
+        }
+    }
+
+    @Test
+    public void CurtirFotoUbatuba() throws InterruptedException {
+        navegador.get("https://www.instagram.com/explore/tags/ubatuba");//navega até paquina de pesquisa
+        Thread.sleep(2000);
+        navegador.navigate().refresh();
+        suporte.wait(navegador, instagram.getFoto());
+        navegador.findElement(instagram.getFoto()).click(); //abre primeira foto da pagina
+
+        Thread.sleep(4000);
+        suporte.wait(navegador, instagram.getLike());
+        navegador.findElement(instagram.getLike()).click();//da like na foto
+
+        Thread.sleep(4000);
+        suporte.wait(navegador, instagram.getNext());
+        navegador.findElement(instagram.getNext()).click();
+
+        for (int i = 0; i <= 35; i++) {
+            Thread.sleep(4000);
+            suporte.wait(navegador, instagram.getLike());
             navegador.findElement(instagram.getLike()).click();
 
             Thread.sleep(2000);

@@ -13,8 +13,8 @@ public class Instagram {
     //tela de pesquisa
     private By foto = By.cssSelector(".EZdmt > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1) > div:nth-child(1) > div:nth-child(2)");
     private By like = By.cssSelector(".fr66n > button:nth-child(1)");
-    private By next = By.cssSelector("body > div._2dDPU.QPGbb.CkGkG > div.EfHg9 > div > div > div > button > div > span > svg");
-    private By next2 = By.cssSelector("body > div._2dDPU.QPGbb.CkGkG > div.EfHg9 > div > div > div.l8mY4.feth3 > button > div > span > svg");
+    private By next = By.cssSelector(".l8mY4 > button:nth-child(1)");
+    private By next2 = By.cssSelector(".l8mY4 > button:nth-child(1)");
 
 
 
